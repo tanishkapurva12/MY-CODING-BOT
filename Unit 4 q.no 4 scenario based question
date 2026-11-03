@@ -1,0 +1,15 @@
+import numpy as np
+import pandas as pd
+book_names = ["Python", "Java", "C++", "DSA", "DBMS"]
+prices = np.array([450, 600, 750, 400, 800])
+average = np.mean(prices)
+print("Book Prices:", prices)
+print("Average Book Price:", average)
+df = pd.DataFrame({
+    "Book Name": book_names,
+    "Price": prices
+})
+print("\nBook Details:")
+print(df)
+print("\nBooks costing more than Rs. 500:")
+print(df[df["Price"] > 500])
