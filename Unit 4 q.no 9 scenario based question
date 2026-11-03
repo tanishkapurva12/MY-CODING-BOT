@@ -1,0 +1,19 @@
+import numpy as np
+import pandas as pd
+course_names = ["Python", "Data Science", "AI", "Web Development", "Cyber Security"]
+fees = np.array([20000, 30000, 45000, 15000, 35000])
+average = np.mean(fees)
+maximum = np.max(fees)
+minimum = np.min(fees)
+print("Course Fees:", fees)
+print("Average Course Fee:", average)
+print("Maximum Course Fee:", maximum)
+print("Minimum Course Fee:", minimum)
+df = pd.DataFrame({
+    "Course Name": course_names,
+    "Course Fee": fees
+})
+print("\nCourse Details:")
+print(df)
+print("\nCourses with fees greater than Rs. 25000:")
+print(df[df["Course Fee"] > 25000])
